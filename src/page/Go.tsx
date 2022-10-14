@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from "antd";
 import '../Css/Go.css';
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,7 @@ function Go() {
         <div>Hi</div>
         <div>Home</div>
       </div>
-      <Link to='/Home'><button className='Click'>Click me</button></Link>
+      <Link to='/Login'><button className='Click'>Click me</button></Link>
       </body>
     </div>
     
