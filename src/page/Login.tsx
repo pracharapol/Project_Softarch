@@ -1,7 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useMediaQuery } from 'react-responsive';
 
 const App: React.FC = () => {
   const onFinish = (values: any) => {
@@ -11,12 +11,13 @@ const App: React.FC = () => {
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
-
+  const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
+  const isIpad = useMediaQuery({ query: '(min-width: 760px) and (max-width: 1248px)' });
   return (
     <Form
       name="basic"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
+      labelCol={{ span: isMobile ? 2 : 8 }}
+      wrapperCol={{ span: isMobile ? 0 : 5 }}
       initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
@@ -44,8 +45,8 @@ const App: React.FC = () => {
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
         <Button type="primary" htmlType="submit">
-        <Link to="/Home">Submit</Link>
-          
+          <Link to="/Home">Submit</Link>
+
         </Button>
       </Form.Item>
     </Form>
