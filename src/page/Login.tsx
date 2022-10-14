@@ -17,7 +17,7 @@ const App: React.FC = () => {
     <Form
       name="basic"
       labelCol={{ span: isMobile ? 2 : 8 }}
-      wrapperCol={{ span: isMobile ? 0 : 5 }}
+      wrapperCol={{ span: isMobile ? 3 : 5 }}
       initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
