@@ -1,11 +1,15 @@
 import React from 'react';
+import { Button } from 'antd';
 import '../Css/Homepage.css';
 import { Link } from 'react-router-dom';
 
 function Homepage() {
   return (
     <div className="Homepage">
-      <Link to='/'><button className='Back'>Back</button></Link>
+    
+      <Button className = 'Back' type="primary" danger>
+        <Link to="/">Back</Link>
+      </Button>
     </div>
   );
 }

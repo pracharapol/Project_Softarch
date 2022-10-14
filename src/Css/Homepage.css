@@ -1,15 +1,16 @@
-.Back{
-    color: rgb(39, 56, 50);
-    font-weight: bold;
-    font-size: 30px;
-    height: 50px;
-    width: 300px;
-    left: calc(50% - 150px);
-    top:calc(50% - 25px);
-    position: absolute;
-    cursor: pointer;
-   }
-.Back:hover{
-    transform: translateY(-15px);
-    transition: 0.5s;
+@import "~antd/dist/antd.css";
+.Back {
+  color: rgb(39, 56, 50);
+  font-weight: bold;
+  font-size: 30px;
+  height: 50px;
+  width: 300px;
+  left: calc(50% - 150px);
+  top: calc(50% - 25px);
+  position: absolute;
+  cursor: pointer;
+}
+.Back:hover {
+  transform: translateY(-15px);
+  transition: 0.5s;
 }
