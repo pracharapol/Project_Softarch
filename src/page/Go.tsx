@@ -7,7 +7,7 @@ function Go() {
     <div className='Go bg'>
       <body >
       <div className='menu'>
-        <div>Hello</div>
+        <div>eeeeeee</div>
         <div>Hi</div>
         <div>Home</div>
       </div>
