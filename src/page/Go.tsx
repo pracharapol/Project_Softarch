@@ -13,10 +13,10 @@ function Go() {
       <body >
       <div className='menu'>
         <div>eeeeeee</div>
-        <div>Hi</div>
+        <div>Hi2</div>
         <div>Home</div>
       </div>
-      <Link to='/Login'><button style={{backgroundColor: isMobile ? 'red' : isIpad ? 'aquamarine': 'yellow'}} className='Click'>Click me</button></Link>
+      <Link to='/Login'><button style={{backgroundColor: isMobile ? 'red' : isIpad ? 'aquamarine': 'yellow'}} className='Click'>Click me2</button></Link>
       </body>
     </div>
     
