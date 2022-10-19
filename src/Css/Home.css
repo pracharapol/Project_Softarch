@@ -297,6 +297,13 @@
       background-color: #000000;      
       top: 65%;
     }
+    .body5:hover{
+      background-color: rgb(33, 33, 33);
+      transition: 0.5s;
+      border: 0.15em solid rgb(255, 255, 255);
+      transform: translateY(-3px);
+      cursor: pointer;   
+    }
     .Bsearch{
       width:20%;
       height: 10%;
@@ -311,9 +318,11 @@
       font-size: 24px;
     }
     .Bsearch:hover{
-      background-color: rgb(105, 103, 103);
+      background-color: rgb(33, 33, 33);
       color: #fff;
       transition: 0.5s;
+      border: 0.1em solid rgb(255, 255, 255);
+
     }
     .Line{
       width: 0.5px;
@@ -323,3 +332,39 @@
       background-color: #fff;
       top: 10%;
     }
+    .logoh{
+      
+      position: absolute;
+      z-index: 100;
+      left: 2%;
+      top: calc(50% - 20px);
+      animation: a infinite 10s linear;
+      background-image: url("Picture/logo.png");
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+    }
+    .logoh a{
+      font-size: 42px;
+      
+    }
+    @keyframes a {
+      from {
+          transform: rotate(0deg);
+      }
+  
+      to {
+          transform: rotate(360deg);
+      }
+  }
+  .body5 .two{
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+  }
+  .body5 .room{
+    font-size: 16px;
+    color: rgb(126, 126, 126);
+    text-align: center;
+  }
+   
