@@ -4,33 +4,38 @@ import '../Css/Home.css';
 import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from "react";
-import { getByTestId } from '@testing-library/react';
+import { getByTestId, render } from '@testing-library/react';
+import ReactDOM from 'react-dom/client';
+import Visibl from '../Component/Visbl';
+import { Clock } from '../Component/Today';
+import { ClockTommorow } from '../Component/Tommorow';
+import { RealTime } from '../Component/Realtime';
 
-// function myFunction() {
-//   const x = document.getElementById('creates');
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
+
 
 function Home() {
   const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
   const isIpad = useMediaQuery({ query: '(min-width: 760px) and (max-width: 1248px)' });
   const isLargeDesktop = useMediaQuery({ query: '(min-width: 1920px)' });
-
-
  
+  //Return Visibility token manage on Visibl Component  
+  useEffect(() => {
+    Visibl();
+  }, []);
+  // useEffect will Render manage for function การเรียกทำงานฟังก์ชันนั้นๆ
+  // รอ token เพื่อปรับฟังก์ชัน Visibl component
+
 
   return (
+    
     <div>
-      <div className='F Go'>
+      
+      <div className='F Go' >
+      
         <div className='body1'>
           <div>
             <Link to="/">
               <div className="logoh">
-
               </div>
             </Link>
             <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}>
@@ -38,8 +43,9 @@ function Home() {
               <li><a href="/Coupons">Coupons</a></li>
               <li><a href="/Activity">Activity</a></li>
 
-              <div><li className='create' id='V' style={{ float: 'right', textAlign: 'center', visibility: 'visible' }}><a className="active">Create-Account</a></li></div>
+              <div><li className='create' id='V' style={{ float: 'right', textAlign: 'center' }}><a href="/Create" className="active">Create-Account</a></li></div>
               <li className='sign' id='C' style={{ float: 'right' }}><a className="active2" href="/Login">Sign-in</a></li>
+            
             </ul>
 
           </div>
@@ -72,9 +78,15 @@ function Home() {
           <div className='body3' >
 
           </div>
-          <div className='body4' >
+          <Link to="/Checkin">
+          <button className='body4' >
+            <div className='checkin'></div>
+            <div className='datetoday'><Clock/></div>
             <div className='Line'></div>
-          </div>
+            <div className='checkout'></div>
+            <div className='datetomorrow'><ClockTommorow/></div>
+          </button>
+          </Link>
           <Link to="/Hotels">
             <button className='body5' >
               <h1 style={{ marginBottom: '0px', fontSize: isIpad ? '16px' : isLargeDesktop ? '28px' : '24px' }} className='two'>2 adults</h1>
@@ -82,18 +94,21 @@ function Home() {
             </button>
           </Link>
 
+          <div className='realtime'><RealTime/></div>
         </div>
+
         <div >
+          
           <button className='Bsearch'>Search</button>
         </div>
+      
 
 
-
-
+   
       </div>
     </div>
 
   );
+  
 }
-
 export default Home;
