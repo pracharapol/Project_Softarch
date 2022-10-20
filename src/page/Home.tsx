@@ -23,7 +23,7 @@ function Home() {
     Visibl();
   }, []);
   // useEffect will Render manage for function การเรียกทำงานฟังก์ชันนั้นๆ
-  // รอ token เพื่อปรับฟังก์ชัน Visibl component
+  // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
 
   return (
