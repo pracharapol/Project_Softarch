@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bahnschrift SemiBold";
+  font-style: normal;
+}
+
+.bodyhotel1 {
+  background-attachment: fixed;
+  position: relative;
+  z-index: 8;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: inherit;
+}
+
+.bodyhotel1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  padding-left: 10%;
+  z-index: 2;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.bodyhotel1 ul li {
+  float: left;
+  margin-left: 2%;
+  padding: 0.5%;
+  border-radius: 10px;
+  position: relative;
+}
+.bodyhotel1 ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  position: relative;
+  margin: 0%;
+}
+.bodyhotel1 ul li .active {
+  border: 0.001em solid rgb(225, 250, 1);
+  border-radius: 0px;
+  position: relative;
+}
+.bodyhotel1 ul li .active2 {
+  border: 0.001em solid rgb(254, 254, 254);
+  border-radius: 0px;
+  padding-right: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+.bodyhotel1 ul li a:hover:not(.active) {
+  background-color: rgb(33, 33, 33);
+}
+.bodyhotel1 ul li a:hover:not(.active2) {
+  background-color: rgb(33, 33, 33);
+}
+
+.create {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 4px;
+  padding-right: 1%;
+  position: relative;
+  width: 12%;
+}
+.sign {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 4px;
+  position: relative;
+  width: 12%;
+}
+.bodyhotel2 {
+  /* margin-top: 50px; */
+  background-color: aliceblue;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  z-index: 3;
+  /* left: calc(10%); */
+  top: 10%;
+  border-radius: 10px;
+  border: 0.1em solid bisque;
+}
+
+.bodyhotel2 .hotel4 {
+  /* left: 50%; */
+  background-attachment: fixed;
+  position: relative;
+  z-index: 8;
+  background-repeat: no-repeat;
+  width: 27%;
+  left: 13%;
+  height: 60%;
+  border-radius: 10px;
+  border: 0.001em solid rgb(254, 254, 254);
+  background-color: #000000;
+  top: 25%;
+}
+
+.bodyhotel2 .hotel2 {
+  /* left: 50%; */
+  background-attachment: fixed;
+  position: absolute;
+  z-index: 8;
+  background-repeat: no-repeat;
+  width: 30%;
+  left: 42%;
+  height: 60%;
+  border-radius: 10px;
+  border: 0.001em solid rgb(254, 254, 254);
+  background-color: #000000;
+  top: 25%;
+}
+
+.bodyhotel2 .hotel2:hover {
+  background-color: rgb(33, 33, 33);
+  transition: 0.5s;
+  border: 0.15em solid rgb(255, 255, 255);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.bodyhotel2 .hotel3 {
+  background-attachment: fixed;
+  position: absolute;
+  z-index: 8;
+  background-repeat: no-repeat;
+  width: 15%;
+  left: calc(74%);
+  height: 60%;
+  border-radius: 10px;
+  border: 0.001em solid rgb(254, 254, 254);
+  background-color: #000000;
+  top: 25%;
+}
+.bodyhotel2 .hotel3:hover {
+  background-color: rgb(33, 33, 33);
+  transition: 0.5s;
+  border: 0.15em solid rgb(255, 255, 255);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.bodyhotel2 .datetoday {
+  font-size: 20px;
+  position: absolute;
+  left: 20%;
+  color: #fff;
+  top: calc(50% - 15px);
+  text-align: center;
+}
+.bodyhotel2 .datetomorrow {
+  font-size: 20px;
+  position: absolute;
+  left: 70%;
+  color: #fff;
+  top: calc(50% - 15px);
+  text-align: center;
+}
+.bodyhotel2 .Line {
+  width: 0.5px;
+  height: 80%;
+  position: relative;
+  left: 50%;
+  background-color: #fff;
+  top: 0%;
+}
+.two {
+  color: #fff;
+}
+
+.hotelname {
+  color: white;
+}
+
+.bodyhotel3 {
+  background-color: aliceblue;
+  width: 41%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  /* left: calc(10%); */
+  /* top: 21%; */
+  border-radius: 10px;
+  border: 0.1em solid bisque;
+  /* float: left; */
+}
+.bodyhotel4 {
+  background-color: aliceblue;
+
+  left: 41%;
+  width: 59%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  /* left: calc(10%); */
+  /* top: 21%; */
+  border-radius: 10px;
+  border: 0.1em solid bisque;
+  /* float: right; */
+}
+
+.bodyhotel4 .sorthotel {
+  margin-top: 2%;
+  margin-left: 2%;
+  color: black;
+}
+
+.bodyhotel4 .sorthotel .sort {
+  width: 12%;
+}
+.bodyhotel4 .sorthotel .bestmatch {
+  width: 17%;
+}
+.bodyhotel4 .sorthotel .cheap {
+  width: 17%;
+}
+.bodyhotel4 .sorthotel .near {
+  width: 17%;
+}
+.bodyhotel4 .sorthotel .top {
+  width: 17%;
+}
+
+.bodyhotel4 .sorthotel .bestmatch:hover {
+  color: #4285f4;
+}
+.bodyhotel4 .sorthotel .cheap:hover {
+  color: #4285f4;
+}
+.bodyhotel4 .sorthotel .near:hover {
+  color: #4285f4;
+}
+.bodyhotel4 .sorthotel .top:hover {
+  color: #4285f4;
+}
+.bodyhotel4 .info {
+  margin-top: 5%;
+  margin-left: 2%;
+  top: 50%;
+  background-color: white;
+  width: 79%;
+  height: 30%;
+  left: 50%;
+  border-radius: 10px;
+  border-color: #4285f4;
+  border-bottom: #4285f4;
+  border: 1px solid#4285f4;
+}
+
+.bodyhotel4 .info .hotelImage {
+  width: 40%;
+  background-color: red;
+  height: 100%;
+}
