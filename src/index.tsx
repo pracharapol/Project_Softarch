@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-          <App />
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   /* eslint-disable-next-line no-undef */
