@@ -186,12 +186,12 @@
   background-color: aliceblue;
   width: 41%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 3;
   /* left: calc(10%); */
   /* top: 21%; */
   border-radius: 10px;
-  border: 0.1em solid bisque;
+  /* border: 0.1em solid bisque; */
   /* float: left; */
 }
 .bodyhotel4 {
@@ -200,12 +200,12 @@
   left: 41%;
   width: 59%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 3;
   /* left: calc(10%); */
   /* top: 21%; */
   border-radius: 10px;
-  border: 0.1em solid bisque;
+  /* border: 0.1em solid bisque; */
   /* float: right; */
 }
 
@@ -217,12 +217,15 @@
 
 .bodyhotel4 .sorthotel .sort {
   width: 12%;
+  /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .bestmatch {
   width: 17%;
+  /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .cheap {
   width: 17%;
+  /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .near {
   width: 17%;
@@ -244,7 +247,7 @@
   color: #4285f4;
 }
 .bodyhotel4 .info {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 2%;
   top: 50%;
   background-color: white;
@@ -257,8 +260,47 @@
   border: 1px solid#4285f4;
 }
 
-.bodyhotel4 .info .hotelImage {
-  width: 40%;
-  background-color: red;
+.hotelImage {
+  width: 36%;
+  /* background-image: url("Picture/Imagehoteljapan.svg"); */
+  /* background-size: cover; */
   height: 100%;
+  position: relative;
+  border-color: #4285f4;
+  border-bottom: #4285f4;
+  border: 1px solid#4285f4;
+  float: left;
+}
+.nameinfo {
+  background-color: #4285f4;
+  /* position: sticky; */
+  left: 50px;
+  margin-top: 5px;
+}
+.namelocation {
+  color: #4285f4;
+  background-color: #fff;
+  /* position: relative; */
+  left: 50px;
+}
+.mapImage {
+  top: 2%;
+  /* background-attachment: fixed; */
+  position: relative;
+  z-index: 3;
+  background-repeat: no-repeat;
+  width: 66%;
+  left: 32%;
+  height: 25%;
+}
+.searchHoteltext {
+  position: relative;
+  top: 5%;
+  left: 32%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border-color: #4285f4;
+  border-bottom: #4285f4;
+  border: 1px solid #000000;
+  width: 66%;
 }
