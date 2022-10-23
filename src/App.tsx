@@ -8,6 +8,7 @@ import Activity from './page/Activity';
 import Cheap from './page/Cheap';
 import Long from './page/Long';
 import Near from './page/Near';
+import Map from './page/Map';
 import {
     BrowserRouter, Link, Route, Routes, useLocation,
 } from 'react-router-dom';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/Cheap" element={<Cheap />} />
             <Route path="/Long" element={<Long />} />
             <Route path="/Near" element={<Near />} />
+            <Route path="/Map" element={<Map />} />
             
         </Routes>
     );
