@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "antd";
 import "../Css/Hotels.css";
+import picim from "../Css/Picture/Imagehoteljapan.svg";
+import picmap from "../Css/Picture/imagemap.svg";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { Clock } from "../Component/Today";
@@ -117,11 +119,30 @@ function Hotels() {
         </Link>
       </div>
 
-      <div className="bodyhotel3">Hello</div>
+      <div className="bodyhotel3">
+        <Link to="/map">
+          <button className="mapImage">
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+              src={picmap}
+              alt=""
+            />
+          </button>
+        </Link>
+
+        <div className="searchHoteltext">🔍 TEXT SEARCH</div>
+      </div>
 
       <div className="bodyhotel4">
         <div className="sorthotel">
-          <button className="sort">SORT</button>
+          <button className="sort" disabled>
+            SORT
+          </button>
           <button className="bestmatch">BEST MATCH</button>
           <button className="cheap">CHEAP HOTEL</button>
           <button className="near">NEAR ME</button>
@@ -130,8 +151,54 @@ function Hotels() {
 
         <div className="info">
           <button className="hotelImage">
-            <img src="imagehoteljapan.svg" alt="" />
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+              src={picim}
+              alt=""
+            />
           </button>
+          <div className="nameinfo">YOKOHAMA</div>
+          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
+          <div className="Linebody3"></div>
+        </div>
+        <div className="info">
+          <button className="hotelImage">
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+              src={picim}
+              alt=""
+            />
+          </button>
+          <div className="nameinfo">YOKOHAMA</div>
+          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
+          <div className="Linebody3"></div>
+        </div>
+        <div className="info">
+          <button className="hotelImage">
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+              src={picim}
+              alt=""
+            />
+          </button>
+          <div className="nameinfo">YOKOHAMA</div>
+          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
+          <div className="Linebody3"></div>
         </div>
       </div>
     </div>
