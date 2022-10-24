@@ -82,15 +82,15 @@
 }
 .bodyhotel2 {
   /* margin-top: 50px; */
-  background-color: aliceblue;
+  background-color: #3f4045;
   width: 100%;
   height: 80px;
   position: relative;
   z-index: 3;
   /* left: calc(10%); */
-  top: 10%;
-  border-radius: 10px;
-  border: 0.1em solid bisque;
+  /* top: 10%; */
+  /* border-radius: 10px; */
+  /* border: 0.1em solid bisque; */
 }
 
 .bodyhotel2 .hotel4 {
@@ -101,26 +101,28 @@
   background-repeat: no-repeat;
   width: 27%;
   left: 13%;
-  height: 60%;
+  height: 80%;
   border-radius: 10px;
   border: 0.001em solid rgb(254, 254, 254);
-  background-color: #000000;
-  top: 25%;
+  background-color: white;
+  /* color: black; */
+  top: 10%;
 }
 
 .bodyhotel2 .hotel2 {
   /* left: 50%; */
+
   background-attachment: fixed;
   position: absolute;
   z-index: 8;
   background-repeat: no-repeat;
   width: 30%;
   left: 42%;
-  height: 60%;
+  height: 80%;
   border-radius: 10px;
   border: 0.001em solid rgb(254, 254, 254);
-  background-color: #000000;
-  top: 25%;
+  background-color: white;
+  top: 10%;
 }
 
 .bodyhotel2 .hotel2:hover {
@@ -137,11 +139,11 @@
   background-repeat: no-repeat;
   width: 15%;
   left: calc(74%);
-  height: 60%;
+  height: 80%;
   border-radius: 10px;
   border: 0.001em solid rgb(254, 254, 254);
-  background-color: #000000;
-  top: 25%;
+  background-color: white;
+  top: 10%;
 }
 .bodyhotel2 .hotel3:hover {
   background-color: rgb(33, 33, 33);
@@ -154,7 +156,8 @@
   font-size: 20px;
   position: absolute;
   left: 20%;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   top: calc(50% - 15px);
   text-align: center;
 }
@@ -162,28 +165,35 @@
   font-size: 20px;
   position: absolute;
   left: 70%;
-  color: #fff;
+  /* color: #fff; */
   top: calc(50% - 15px);
   text-align: center;
+  color: black;
 }
 .bodyhotel2 .Line {
   width: 0.5px;
   height: 80%;
   position: relative;
   left: 50%;
-  background-color: #fff;
+  background-color: black;
   top: 0%;
+  /* color: black; */
 }
 .two {
-  color: #fff;
+  color: black;
 }
 
 .hotelname {
-  color: white;
+  color: black;
+  text-align: left;
+}
+.hotelchoices {
+  text-align: left;
+  margin-left: 9%;
 }
 
 .bodyhotel3 {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   width: 41%;
   height: 100%;
   position: absolute;
@@ -195,7 +205,7 @@
   /* float: left; */
 }
 .bodyhotel4 {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 
   left: 41%;
   width: 59%;
@@ -213,10 +223,17 @@
   margin-top: 2%;
   margin-left: 2%;
   color: black;
+  position: sticky;
+  top: 0;
+
+  /* position: fixed; */
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
 }
 
 .bodyhotel4 .sorthotel .sort {
   width: 12%;
+
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .bestmatch {

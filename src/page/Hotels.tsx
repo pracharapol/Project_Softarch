@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import "../Css/Hotels.css";
 import picim from "../Css/Picture/Imagehoteljapan.svg";
+import picim2 from "../Css/Picture/Imagehoteljapan2.svg";
 import picmap from "../Css/Picture/imagemap.svg";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -141,12 +142,55 @@ function Hotels() {
       <div className="bodyhotel4">
         <div className="sorthotel">
           <button className="sort" disabled>
-            SORT
+            <p
+              style={{
+                marginBottom: "0px",
+                fontSize: isIpad ? "12px" : isLargeDesktop ? "20px" : "14px",
+              }}
+            >
+              SORT
+            </p>
           </button>
-          <button className="bestmatch">BEST MATCH</button>
-          <button className="cheap">CHEAP HOTEL</button>
-          <button className="near">NEAR ME</button>
-          <button className="top">TOP REVIEW</button>
+          <button className="bestmatch">
+            <p
+              style={{
+                marginBottom: "0px",
+                fontSize: isIpad ? "12px" : isLargeDesktop ? "20px" : "14px",
+              }}
+            >
+              BEST MATCH
+            </p>
+          </button>
+          <button className="cheap">
+            <p
+              style={{
+                marginBottom: "0px",
+                fontSize: isIpad ? "12px" : isLargeDesktop ? "20px" : "14px",
+              }}
+            >
+              CHEAP HOTEL
+            </p>
+          </button>
+          <button className="near">
+            <p
+              style={{
+                marginBottom: "0px",
+                fontSize: isIpad ? "12px" : isLargeDesktop ? "20px" : "14px",
+              }}
+            >
+              NEAR ME
+            </p>
+          </button>
+          <button className="top">
+            <p
+              style={{
+                marginBottom: "0px",
+                fontSize: isIpad ? "12px" : isLargeDesktop ? "20px" : "14px",
+              }}
+            >
+              TOP REVIEW
+            </p>
+          </button>
         </div>
 
         <div className="info">
@@ -159,6 +203,23 @@ function Hotels() {
                 backgroundSize: "cover",
               }}
               src={picim}
+              alt=""
+            />
+          </button>
+          <div className="nameinfo">YOKOHAMA</div>
+          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
+          <div className="Linebody3"></div>
+        </div>
+        <div className="info">
+          <button className="hotelImage">
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative",
+                backgroundSize: "cover",
+              }}
+              src={picim2}
               alt=""
             />
           </button>
