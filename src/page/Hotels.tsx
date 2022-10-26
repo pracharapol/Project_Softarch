@@ -206,43 +206,21 @@ function Hotels() {
               alt=""
             />
           </button>
-          <div className="nameinfo">YOKOHAMA</div>
-          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
-          <div className="Linebody3"></div>
-        </div>
-        <div className="info">
-          <button className="hotelImage">
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "relative",
-                backgroundSize: "cover",
-              }}
-              src={picim2}
-              alt=""
-            />
-          </button>
-          <div className="nameinfo">YOKOHAMA</div>
-          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
-          <div className="Linebody3"></div>
-        </div>
-        <div className="info">
-          <button className="hotelImage">
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "relative",
-                backgroundSize: "cover",
-              }}
-              src={picim}
-              alt=""
-            />
-          </button>
-          <div className="nameinfo">YOKOHAMA</div>
-          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
-          <div className="Linebody3"></div>
+          <div className="infoleft">
+            <div className="nameinfo">YOKOHAMA</div>
+            <div className="namelocation">
+              Yokohama,Yokohama-0.4km to center
+            </div>
+            <div className="Linebody3"></div>
+          </div>
+          <div className="inforight">
+            <div className="review">Excellent</div>
+            <div className="userReview">322 review</div>
+            <div className="reviewStar">9.8</div>
+            <div className="price">B 550</div>
+            <div className="extra">+FREE CANCELLATION</div>
+            <button className="selectR">SELECT ROOM</button>
+          </div>
         </div>
         <div className="info">
           <button className="hotelImage">
@@ -257,9 +235,21 @@ function Hotels() {
               alt=""
             />
           </button>
-          <div className="nameinfo">YOKOHAMA</div>
-          <div className="namelocation">Yokohama,Yokohama-0.4km to center</div>
-          <div className="Linebody3"></div>
+          <div className="infoleft">
+            <div className="nameinfo">YOKOHAMA</div>
+            <div className="namelocation">
+              Yokohama,Yokohama-0.4km to center
+            </div>
+            <div className="Linebody3"></div>
+          </div>
+          <div className="inforight">
+            <div className="review">Excellent</div>
+            <div className="userReview">322 review</div>
+            <div className="reviewStar">9.8</div>
+            <div className="price">B 550</div>
+            <div className="extra">+FREE CANCELLATION</div>
+            <button className="selectR">SELECT ROOM</button>
+          </div>
         </div>
       </div>
     </div>
