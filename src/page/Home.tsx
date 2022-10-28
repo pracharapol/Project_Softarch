@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from "react";
 import { getByTestId, render } from '@testing-library/react';
 import ReactDOM from 'react-dom/client';
-import Visibl from '../Component/Visbl';
+import Greeting from '../Component/Visbl';
 import { Clock } from '../Component/Today';
 import { ClockTommorow } from '../Component/Tommorow';
 import { RealTime } from '../Component/Realtime';
@@ -17,21 +17,24 @@ function Home() {
   const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
   const isIpad = useMediaQuery({ query: '(min-width: 760px) and (max-width: 1248px)' });
   const isLargeDesktop = useMediaQuery({ query: '(min-width: 1920px)' });
- 
+
   //Return Visibility token manage on Visibl Component  
-  useEffect(() => {
-    Visibl();
-  }, []);
+  // useEffect(() => {
+  //   Visibl();
+  // }, []);
   // useEffect will Render manage for function การเรียกทำงานฟังก์ชันนั้นๆ
   // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
+  function ButtonLoggin() {
+    return false
+  }
 
   return (
-    
+
     <div>
-      
+
       <div className='F Go' >
-      
+
         <div className='body1'>
           <div>
             <Link to="/">
@@ -42,10 +45,7 @@ function Home() {
               <li><a href="/Hotels">Hotels</a></li>
               <li><a href="/Coupons">Coupons</a></li>
               <li><a href="/Activity">Activity</a></li>
-
-              <div><li className='create' id='V' style={{ float: 'right', textAlign: 'center' }}><a href="/Create" className="active">Create-Account</a></li></div>
-              <li className='sign' id='C' style={{ float: 'right' }}><a className="active2" href="/Login">Sign-in</a></li>
-            
+              <Greeting isLoggedIn={ButtonLoggin()} />
             </ul>
 
           </div>
@@ -79,13 +79,13 @@ function Home() {
 
           </div>
           <Link to="/Checkin">
-          <button className='body4' >
-            <div className='checkin'></div>
-            <div className='datetoday'><Clock/></div>
-            <div className='Line'></div>
-            <div className='checkout'></div>
-            <div className='datetomorrow'><ClockTommorow/></div>
-          </button>
+            <button className='body4' >
+              <div className='checkin'></div>
+              <div className='datetoday'><Clock /></div>
+              <div className='Line'></div>
+              <div className='checkout'></div>
+              <div className='datetomorrow'><ClockTommorow /></div>
+            </button>
           </Link>
           <Link to="/Hotels">
             <button className='body5' >
@@ -94,21 +94,21 @@ function Home() {
             </button>
           </Link>
 
-          <div className='realtime'><RealTime/></div>
+          <div className='realtime'><RealTime /></div>
         </div>
 
         <div >
-          
+
           <button className='Bsearch'>Search</button>
         </div>
-      
 
 
-   
+
+
       </div>
     </div>
 
   );
-  
+
 }
 export default Home;
