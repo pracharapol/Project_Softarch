@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Home from "./page/Home";
 import Create from "./page/Create";
@@ -9,6 +10,19 @@ import Cheap from "./page/Cheap";
 import Long from "./page/Long";
 import Near from "./page/Near";
 import Hotelsinfo from "./page/Hotelsinfo";
+=======
+import React from 'react';
+import Home from './page/Home';
+import Create from './page/Create';
+import Homepage from './page/Homepage';
+import Loginpage from './page/Login';
+import Hotels from './page/Hotels';
+import Activity from './page/Activity';
+import Cheap from './page/Cheap';
+import Long from './page/Long';
+import Near from './page/Near';
+import Map from './page/Map';
+>>>>>>> a201bbab8aebf21ebcbfa08c09125c559be838f9
 import {
   BrowserRouter,
   Link,
@@ -18,6 +32,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+<<<<<<< HEAD
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -32,5 +47,22 @@ function App() {
       <Route path="Hotelsinfo" element={<Hotelsinfo />} />
     </Routes>
   );
+=======
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Create" element={<Create />} />
+            <Route path="/Login" element={<Loginpage />} />
+            <Route path="/Homepage" element={<Homepage />} />
+            <Route path="/Hotels" element={<Hotels />} />
+            <Route path="/Activity" element={<Activity />} />
+            <Route path="/Cheap" element={<Cheap />} />
+            <Route path="/Long" element={<Long />} />
+            <Route path="/Near" element={<Near />} />
+            <Route path="/Map" element={<Map />} />
+            
+        </Routes>
+    );
+>>>>>>> a201bbab8aebf21ebcbfa08c09125c559be838f9
 }
 export default App;

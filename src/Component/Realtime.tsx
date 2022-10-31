@@ -24,6 +24,6 @@ export class RealTime extends Component<{}, ClockState> {
   }
 
   render() {
-    return <p>{this.state.time.toLocaleTimeString()}</p>
+    return <p style={{marginBottom: '0'}}>{this.state.time.toLocaleTimeString()}</p>
   }
 }
