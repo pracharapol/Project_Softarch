@@ -1,21 +1,50 @@
-import React from 'react';
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import React, { Component } from 'react'; 
 
-export const Vs = () => { 
-    const maybeMyElement = document.getElementById('V') as HTMLElement;
-    const maybeMyElement1 = document.getElementById('C') as HTMLElement;
-        //รอ token ตัวแปร visib จะเปลี่ยนเป็นค่า token โดยใช้ string
-    const visib = '';
-    const token = '';
-    if(visib === token){
-      maybeMyElement.style.visibility = 'visible';
-      maybeMyElement1.style.visibility ='visible';
+function UserGreeting(props: any) {
+  return <li className='create' id='V' style={{ float: 'right', textAlign: 'center' }}><a href="/Create" className="active">Create-Account</a></li>;
+        
+}
+function UserGreeting2(props: any) {
+  return <li className='sign' id='C' style={{ float: 'right' }}><a className="active2" href="/Login">Sign-in</a></li>;
+        
+}
 
-    }
-    else{
-        maybeMyElement.style.visibility = 'hidden';
-        maybeMyElement1.style.visibility ='hidden';
-    }
+function GuestGreeting(props: any) {
+  return <h1 style={{ fontSize: '20px', color: 'white' }}>Please sign up.</h1>;
+}
+
+export default function Greeting(props: { isLoggedIn: any; }) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <GuestGreeting />;
     
   }
-  export default Vs;
+  return <><UserGreeting /><UserGreeting2 /></>;
+  
+}
+
+
+
+
+
+
+
+// export const Vs = () => { 
+//     const maybeMyElement = document.getElementById('V') as HTMLElement;
+//     const maybeMyElement1 = document.getElementById('C') as HTMLElement;
+//         //รอ token ตัวแปร visib จะเปลี่ยนเป็นค่า token โดยใช้ string
+//     const visib = '';
+//     const token = '';
+//     if(visib === token){
+//       maybeMyElement.style.visibility = 'visible';
+//       maybeMyElement1.style.visibility ='visible';
+
+//     }
+//     else{
+//         maybeMyElement.style.visibility = 'hidden';
+//         maybeMyElement1.style.visibility ='hidden';
+//     }
+    
+//   }
+//   export default Vs;
