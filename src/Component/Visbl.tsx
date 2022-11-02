@@ -1,8 +1,11 @@
 import { useState } from "react";
 import React, { Component } from 'react'; 
 
+import { useMediaQuery } from 'react-responsive';
+
 function UserGreeting(props: any) {
-  return <li className='create' id='V' style={{ float: 'right', textAlign: 'center' }}><a href="/Create" className="active">Create-Account</a></li>;
+
+  return <li className='create' id='V' style={{ float: 'right', textAlign: 'center'}}><a href="/Create" className="active">Create-Account</a></li>;
         
 }
 function UserGreeting2(props: any) {
@@ -11,7 +14,8 @@ function UserGreeting2(props: any) {
 }
 
 function GuestGreeting(props: any) {
-  return <h1 style={{ fontSize: '20px', color: 'white' }}>Please sign up.</h1>;
+  
+  return <li className='profile' id='C' style={{ float: 'right' }}><a className="active3" href="/Profile">Profile</a></li>;
 }
 
 export default function Greeting(props: { isLoggedIn: any; }) {

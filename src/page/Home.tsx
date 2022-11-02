@@ -26,7 +26,7 @@ function Home() {
   // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
   function ButtonLoggin() {
-    return false
+    return true
   }
 
   return (
@@ -41,14 +41,16 @@ function Home() {
               <div className="logoh">
               </div>
             </Link>
-            <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}>
-              <li><a href="/Hotels">Hotels</a></li>
+            <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px'}}>
+              <li><a href="/Hotels" >Hotels</a></li>
               <li><a href="/Coupons">Coupons</a></li>
               <li><a href="/Activity">Activity</a></li>
               <Greeting isLoggedIn={ButtonLoggin()} />
+              
             </ul>
-
+            
           </div>
+          
         </div>
         <div className='bg2'>
           <div className='HEAD'>

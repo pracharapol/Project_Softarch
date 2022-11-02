@@ -9,6 +9,7 @@ import Cheap from './page/Cheap';
 import Long from './page/Long';
 import Near from './page/Near';
 import Map from './page/Map';
+import Profile from './page/Profile';
 import {
     BrowserRouter, Link, Route, Routes, useLocation,
 } from 'react-router-dom';
@@ -26,6 +27,7 @@ function App() {
             <Route path="/Long" element={<Long />} />
             <Route path="/Near" element={<Near />} />
             <Route path="/Map" element={<Map />} />
+            <Route path="/Profile" element={<Profile />} />
             
         </Routes>
     );
