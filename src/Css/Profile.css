@@ -2,7 +2,6 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    
    
 
 }
@@ -12,6 +11,7 @@
     position: absolute;
     background-color: #10121c;
     border: 0.03em solid rgb(255, 255, 255);
+    
 }
 .Profilepicture{
     width: 150px;
@@ -65,6 +65,7 @@
     background-color: #10121c;
     border: 0.03em solid rgb(255, 255, 255);
     color: white;
+    position: relative;
 }
 .BH:hover{
     transition: 0.5s;
@@ -109,4 +110,10 @@
     margin-bottom: 2%;
     letter-spacing: 3px;
     padding-left: 0.5%;
+}
+.email{
+    margin-left: 30%;
+}
+.password{
+    margin-left: 30%;
 }
