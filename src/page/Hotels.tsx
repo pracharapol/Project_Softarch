@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "antd";
 import "../Css/Hotels.css";
 import picim from "../Css/Picture/Imagehoteljapan.svg";
 import picim2 from "../Css/Picture/Imagehoteljapan2.svg";

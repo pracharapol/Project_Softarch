@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bahnschrift SemiBold";
+  font-style: normal;
+}
+
+.navbar {
+  /* background-color: bisque;
+  position: absolute;
+  /* display: in; */
+  /* width: 100%; */
+  /* height: 50%;  */
+  background-attachment: fixed;
+  background-color: #4285f4;
+  position: relative;
+  z-index: 8;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: inherit;
+}
+.clh {
+  background-color: #4285f4;
+  /* height: 20%; */
+}
+
+.body2 {
+  margin-top: 3%;
+  background-color: blanchedalmond;
+  position: absolute;
+  height: 80%;
+  float: left;
+  border-radius: 100px;
+}
+/* .loginbody * {
+  margin-left: 5%;
+} */
+.loginbody {
+  width: 50%;
+  height: 100%;
+  /* background-color: aquamarine; */
+  border-radius: 50px;
+  position: absolute;
+  /* border-radius: 30px; */
+  left: 0%;
+}
+.picbody {
+  width: 50%;
+  height: 100%;
+  /* background-color: blue; */
+  float: right;
+  /* position: absolute; */
+}
+.logh {
+  margin-left: 5%;
+  margin-top: 20%;
+}
+.summitbut {
+  margin-left: 5%;
+  position: absolute;
+  margin-top: 10%;
+  width: 90%;
+  background-color: #4285f4;
+}
+.fo {
+  /* padding-top: 15px; */
+}
+.passposi {
+  margin-left: 5%;
+  position: absolute;
+  margin-top: 8%;
+}
+#pass {
+  margin-left: 5%;
+  width: 90%;
+  position: absolute;
+  margin-top: 9%;
+}
+.emailposi {
+  margin-left: 5%;
+  position: absolute;
+  margin-top: 5%;
+}
+#email {
+  margin-left: 5%;
+  width: 90%;
+  position: absolute;
+  margin-top: 6%;
+}
+.pic {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crAcc {
+  margin-left: 5%;
+  left: 74%;
+  position: relative;
+}
+
+#staylog {
+  margin-left: 5%;
+  position: absolute;
+  margin-top: 11%;
+}
+#staylogin {
+  margin-left: 8%;
+  /* margin-left: 3%; */
+  position: absolute;
+  margin-top: 10.5%;
+}
+
+.forse {
+  margin-left: 5%;
+  position: relative;
+}
