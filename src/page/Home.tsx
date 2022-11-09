@@ -66,7 +66,7 @@ function Home() {
             <Link to="/Map"><ul className='M' style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '20px' : '16px' }}>🗺️</ul></Link>
           </div>
 
-          <div className='body2' >
+          <div className='body20' >
 
             <ul style={{ marginBottom: '0' }}>
               <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="/Hotels">Hotels</a></li>
@@ -77,7 +77,7 @@ function Home() {
             </ul>
 
           </div>
-          <div className='body3' >
+          <div className='body30' >
 
           </div>
           <Link to="/Checkin">

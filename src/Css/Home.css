@@ -188,7 +188,7 @@
 
 
 
-  .body2{
+  .body20{
     background-attachment:fixed;
     position: relative;
     z-index: 8;
@@ -201,7 +201,7 @@
     border: 0.001em solid rgb(254, 254, 254);
     
   }
-  .body2 ul {
+  .body20 ul {
       list-style-type: none;
       margin: 0;
       padding: 0.5%;
@@ -221,7 +221,7 @@
     padding-bottom: 1%;
     }
     
-  .body2 ul  li {
+  .body20 ul  li {
       float: left;
       margin-left:1% ;
       padding: auto;
@@ -230,7 +230,7 @@
       width:19%;
       background-position: center;
     }
-  .body2 ul li a {
+  .body20 ul li a {
       display: block;
       color: white;
       text-align: center;
@@ -238,7 +238,7 @@
       text-decoration: none;
       position: relative;
     }
-    .body2 ul li a:hover {
+    .body20 ul li a:hover {
       background-color: rgb(33, 33, 33);
       border-radius: 5px;
     }
@@ -269,7 +269,7 @@
     .M:hover{
       background-color: rgb(105, 103, 103);
     }
-    .body3{
+    .body30{
       background-attachment:fixed;
       position: absolute;
       z-index: 8;
