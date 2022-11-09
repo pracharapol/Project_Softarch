@@ -9,7 +9,7 @@ function Login() {
       <div className="navbar">
         <h1 className="clh">.</h1>
       </div>
-      <div className="body2">
+      <div className="bodyoflogin">
         <div className="loginbody">
           <h1 className="logh">LOGIN</h1>
           <form action="" className="fo">
