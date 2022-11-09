@@ -8,8 +8,8 @@
 
 .navbar {
   /* background-color: bisque;
-  position: absolute;
-  /* display: in; */
+    position: absolute;
+    /* display: in; */
   /* width: 100%; */
   /* height: 50%;  */
   background-attachment: fixed;
@@ -34,9 +34,9 @@
   border-radius: 100px;
 }
 /* .loginbody * {
-  margin-left: 5%;
-} */
-.loginbody {
+    margin-left: 5%;
+  } */
+.Regisbody {
   width: 50%;
   height: 100%;
   /* background-color: aquamarine; */
@@ -80,13 +80,13 @@
 .emailposi {
   margin-left: 5%;
   position: absolute;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 #email {
   margin-left: 5%;
   width: 90%;
   position: absolute;
-  margin-top: 6%;
+  margin-top: 5%;
 }
 .pic {
   border-radius: 50px;
@@ -95,9 +95,9 @@
   object-fit: cover;
 }
 
-.crAcc {
+.log {
   margin-left: 5%;
-  left: 74%;
+  left: 83%;
   position: absolute;
   margin-top: 15%;
 }
@@ -105,16 +105,41 @@
 #staylog {
   margin-left: 5%;
   position: absolute;
-  margin-top: 11%;
+  margin-top: 18%;
 }
 #staylogin {
   margin-left: 8%;
   /* margin-left: 3%; */
   position: absolute;
-  margin-top: 10.5%;
+  margin-top: 17.5%;
 }
 
 .forse {
   margin-left: 5%;
   position: relative;
+}
+#fname {
+  margin-left: 5%;
+  width: 90%;
+}
+#lname {
+  margin-left: 5%;
+  width: 90%;
+}
+.fnameposi {
+  margin-left: 5%;
+}
+.lnameposi {
+  margin-left: 5%;
+}
+.passenposi {
+  margin-left: 5%;
+  position: absolute;
+  margin-top: 16%;
+}
+#passen {
+  margin-left: 5%;
+  width: 90%;
+  position: absolute;
+  margin-top: 17%;
 }
