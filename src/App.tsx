@@ -9,6 +9,7 @@ import Cheap from "./page/Cheap";
 import Long from "./page/Long";
 import Near from "./page/Near";
 import Hotelsinfo from "./page/Hotelsinfo";
+import Regispage from "./page/Regispage";
 import {
   BrowserRouter,
   Link,
@@ -30,6 +31,7 @@ function App() {
       <Route path="/Long" element={<Long />} />
       <Route path="/Near" element={<Near />} />
       <Route path="Hotelsinfo" element={<Hotelsinfo />} />
+      <Route path="Regis" element={<Regispage />} />
     </Routes>
   );
 }
