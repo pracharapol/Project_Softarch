@@ -1,0 +1,119 @@
+.BgP{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+   
+
+}
+.Picture{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    background-color: #10121c;
+    border: 0.03em solid rgb(255, 255, 255);
+    
+}
+.Profilepicture{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: calc(50% - 75px);
+    top: calc(20% - 75px);
+    border-radius: 100%;
+    padding: 0.5%;
+    border: 0.3em solid rgb(124, 29, 131);
+}
+.Avatar:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.TextProfile{
+    width: 100%;
+    position: absolute;
+    top: calc(20% + 100px);
+    
+}
+.TextProfile h2{
+    font-size: 16px;
+    text-align: center;
+    padding: 2%;
+    color: white;
+    
+}
+
+.Setting{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    background-color: #1d1d26;
+    left: 30%;
+    
+}
+.Setting h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 24px;
+    margin-top: 5%;
+    background-color: #10121c;
+}
+.BH{
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 20%;
+    cursor: pointer;
+    background-color: #10121c;
+    border: 0.03em solid rgb(255, 255, 255);
+    color: white;
+    position: relative;
+}
+.BH:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+.ts{
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    letter-spacing: 5px;
+    padding-left: 0.5%;
+}
+.passwordS{
+    color: white;
+    margin-left: 30%;
+    font-size: 16px;
+}
+.button-save{
+    margin-left: 45%;
+    width: 10%;
+    cursor: pointer;
+    background-color: #10121c;
+    border: 0.03em solid rgb(255, 255, 255);
+    color: white;
+}
+.button-save:hover{
+    background-color: #10121c;
+    border: 0.03em solid rgb(255, 255, 255);
+    transition: 0.5s;
+    transform: scale(1.2);
+    color: white;
+}
+
+.profileS{
+    color: white;
+    margin-left: 30%;
+    font-size: 16px;
+}
+.tp{
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    letter-spacing: 3px;
+    padding-left: 0.5%;
+}
+.email{
+    margin-left: 30%;
+}
+.password{
+    margin-left: 30%;
+}
