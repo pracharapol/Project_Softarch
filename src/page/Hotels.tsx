@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "antd";
 import "../Css/Hotels.css";
 import picim from "../Css/Picture/Imagehoteljapan.svg";
 import picim2 from "../Css/Picture/Imagehoteljapan2.svg";
@@ -194,18 +193,20 @@ function Hotels() {
         </div>
 
         <div className="info">
-          <button className="hotelImage">
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "relative",
-                backgroundSize: "cover",
-              }}
-              src={picim}
-              alt=""
-            />
-          </button>
+          <Link to="/Hotelsinfo">
+            <button className="hotelImage">
+              <img
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  position: "relative",
+                  backgroundSize: "cover",
+                }}
+                src={picim}
+                alt=""
+              />
+            </button>
+          </Link>
           <div className="infoleft">
             <div className="nameinfo">YOKOHAMA</div>
             <div className="namelocation">

@@ -1,26 +1,38 @@
 import React from "react";
+import { Button } from "antd";
+import "../Css/Regis.css";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 import picim from "../Css/Picture/Imagebglog.svg";
-import "../Css/Login.css";
-function Login() {
+
+function Regispage() {
   return (
-    <div className="Create">
+    <div className="Regispage">
       <div className="navbar">
         <h1 className="clh">.</h1>
       </div>
       <div className="body2">
-        <div className="loginbody">
-          <h1 className="logh">LOGIN</h1>
+        <div className="Regisbody">
+          <h1 className="logh">REGISTER</h1>
           <form action="" className="fo">
+            <label className="fnameposi" htmlFor="fname">
+              Firstname
+            </label>
+            <br />
             {/* <br /> */}
-            <h3 className="forse">
-              For security, please sign in to access your information
-            </h3>
+            <input type="text" id="fname" />
+            <br />
+            <br />
+            <label className="lnameposi" htmlFor="lname">
+              Lastname
+            </label>
+            {/* <br /> */}
+            <br />
+            <input type="text" id="lname" />
+            <br />
             <label className="emailposi" htmlFor="email">
               Email
             </label>
-            <br />
+            <br />0
             <input type="text" id="email" />
             <br />
             <label className="passposi" htmlFor="pass">
@@ -28,9 +40,14 @@ function Login() {
             </label>
             <br />
             <input type="text" id="pass" />
+            <label className="passenposi" htmlFor="passen">
+              Confirm Password
+            </label>
+            <br />
+            <input type="text" id="passen" />
             <br />
             <br />
-            <input
+            {/* <input
               type="checkbox"
               id="staylog"
               name="staylog"
@@ -39,14 +56,14 @@ function Login() {
             <label id="staylogin" htmlFor="staylog">
               {" "}
               Stay Login
-            </label>
+            </label> */}
             <br></br>
             <br />
             {/* <input className="summitbut" type="Submit" value="Submit"></input> */}
             <button className="summitbut">LOGIN</button>
             <div className="">
-              <Link to="/Regis" className="crAcc">
-                Create Account
+              <Link to="/Login" className="log">
+                LOGIN
               </Link>
             </div>
           </form>
@@ -71,4 +88,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Regispage;
