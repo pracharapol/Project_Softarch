@@ -10,7 +10,7 @@ function Regispage() {
       <div className="navbar">
         <h1 className="clh">.</h1>
       </div>
-      <div className="body2">
+      <div className="bodyofregis">
         <div className="Regisbody">
           <h1 className="logh">REGISTER</h1>
           <form action="" className="fo">
