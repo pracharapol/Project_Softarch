@@ -2,7 +2,6 @@
     position: absolute;
     height: 100%;
     width: 100%;
-   
 
 }
 .Picture{
@@ -11,6 +10,7 @@
     position: absolute;
     background-color: #10121c;
     border: 0.03em solid rgb(255, 255, 255);
+   
     
 }
 .Profilepicture{

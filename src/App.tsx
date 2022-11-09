@@ -10,6 +10,7 @@ import Long from './page/Long';
 import Near from './page/Near';
 import Map from './page/Map';
 import Profile from './page/Profile';
+import PaymentInformation from './page/PaymentInformation';
 import {
     BrowserRouter, Link, Route, Routes, useLocation,
 } from 'react-router-dom';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/Near" element={<Near />} />
             <Route path="/Map" element={<Map />} />
             <Route path="/Profile" element={<Profile />} />
+            <Route path="/PaymentInformation" element={<PaymentInformation />} />
             
         </Routes>
     );

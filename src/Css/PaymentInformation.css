@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Bahnschrift SemiBold';
+    font-style: normal;
+  
+  }
+  .Pay{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      
+     
+  
+  }
+  .Pay::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10121c;
+    z-index: 0;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(100%);
+  }
+
+  .bgp3{
+    background-color: rgba(17, 15, 17, 1);
+    width: 80%;
+    height: 70%;
+    position: relative;
+    z-index: 3;
+    left:calc(10%);
+    top:10%;
+    border-radius: 10px;
+    border: 0.1em solid #ffffff;
+  }
+  .bgp3 h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .profilepa{
+    color: white;
+    margin-left: 20%;
+    font-size: 16px;
+    width: 40%;
+}
+.tpa{
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    letter-spacing: 3px;
+    padding-left: 0.5%;
+}
+.inpaa{
+ width: 100%;
+}
+
+   h2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+   }
+   h3{
+    color: #ffffff;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 16px;
+   }
+.smoke{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+.notsmoke{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+.smokecheck{
+    scale: 1.6;
+    margin-left: 20%;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.notsmokecheck{
+    margin-left: 30%;
+    scale: 1.6;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.sm{
+    margin-top: 5%;
+}
+
+.bed{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+.notbed{
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+.bedcheck{
+    scale: 1.6;
+    margin-left: 20%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.notbedcheck{
+    margin-left: 30%;
+    scale: 1.6;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.F1{
+    width: 50%;
+    position: absolute;
+}
+.F2{
+    width: 50%;
+    left: 50%;
+    position: relative;
+}
+.button-pa{
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 20%;
+    padding: 0.5%;
+    cursor: pointer;
+    background-color: #10121c;
+    border: 0.03em solid rgb(255, 255, 255);
+    color: white;
+    position: relative;
+}
+.button-pa:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+.Headers{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0%;
+    border-radius: 10px;
+    padding: 0.5%;
+    margin-bottom: 2%;
+}

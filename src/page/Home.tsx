@@ -26,7 +26,7 @@ function Home() {
   // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
   function ButtonLoggin() {
-    return true
+    return false
   }
 
   return (
