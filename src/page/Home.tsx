@@ -44,7 +44,7 @@ function Home() {
             <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px'}}>
               <li><a href="/Hotels" >Hotels</a></li>
               <li><a href="/Coupons">Coupons</a></li>
-              <li><a href="/Activity">Activity</a></li>
+              <li><a href="/PaymentInformation">Activity</a></li>
               <Greeting isLoggedIn={ButtonLoggin()} />
               
             </ul>

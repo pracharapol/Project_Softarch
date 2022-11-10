@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Bahnschrift SemiBold';
+    font-style: normal;
+  
+  }
+  .Bill{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      
+     
+  
+  }
+  .Bill::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10121c;
+    z-index: 0;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(100%);
+  }
+.Billbg{
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    top: 18%;
+    left: 20%;
+    z-index: 3;
+  }
+.Billbg h1{
+    font-size: 20px;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+
+  .Billname{
+    width: 50%;
+    position: absolute;
+    left: 0;
+  }
+  .Billname h2{
+    margin-top: 5%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .Billname h3{
+    font-size: 16px;
+    margin-left: 25%;
+  }
+  .BillHotelname{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    
+  }
+  .BillHotelname h2{
+    margin-top: 5%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .BillHotelname h3{
+    font-size: 16px;
+    margin-left: 25%;
+  }
+  .tablebill{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    margin-top: 20%;
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+    height: 20px;
+  }
+  .th1{
+    width: 6%;
+  }
+  .th2{
+    width: 50%;
+  }
+  .th3{
+    width: 10%;
+  }
+  .th4{
+    width: 10%;
+  }
+  .th5{
+    width: 20%;
+  }
+  .tr1{
+    height: 30px;
+  }
+  .thE1{
+    width: 76%;
+  }
+  .thE2{
+    width: 20%;
+  }
+
+  .BillEnd h2{
+    margin-top: 5%;
+    margin-left: 0%;
+    font-size: 16px;
+    color: red;
+  }
+  .BillEnd h3{
+    color: red;
+    font-size: 16px;
+    margin-left: 5%;
+  }

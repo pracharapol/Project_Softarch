@@ -15,6 +15,7 @@ import Map from "./page/Map";
 import Profile from "./page/Profile";
 import Hotelsinfo from "./page/Hotelsinfo";
 import Regispage from "./page/Regispage";
+import Bill from "./page/Bill";
 import {
   BrowserRouter,
   Link,
@@ -40,6 +41,7 @@ function App() {
       <Route path="/PaymentInformation" element={<PaymentInformation />} />
       <Route path="Hotelsinfo" element={<Hotelsinfo />} />
       <Route path="Regis" element={<Regispage />} />
+      <Route path="Bill" element={<Bill />} />
 
     </Routes>
   );
