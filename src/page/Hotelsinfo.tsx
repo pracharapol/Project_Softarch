@@ -118,6 +118,19 @@ function Hotelsinfo() {
           </button>
         </Link>
       </div>
+      <div className="backgpicinfo">
+        hi
+        <div className="bodypicinfo">
+          <div className="bodyleftinfo">hi</div>
+          <div className="bodyrightinfo">
+            <div className="bodyrightinfoOne"></div>
+            <div className="bodyrightinfoTwo"></div>
+            <div className="bodyrightinfoThree"></div>
+            <div className="bodyrightinfoFour"></div>
+          </div>
+        </div>
+      </div>
+      <div className="bodyinforoom">he</div>
     </div>
   );
 }

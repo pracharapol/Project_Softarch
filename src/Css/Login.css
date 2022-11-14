@@ -27,6 +27,9 @@
 
 .bodyoflogin {
   margin-top: 3%;
+  /* align-items: center; */
+  width: 70%;
+  left: 15%;
   background-color: blanchedalmond;
   position: absolute;
   height: 80%;
