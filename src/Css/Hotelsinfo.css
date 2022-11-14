@@ -191,12 +191,12 @@
   text-align: left;
   margin-left: 9%;
 }
-.backgpicinfo {
-  position: relative;
+/* .backgpicinfo {
+  position: absolute;
   width: 100%;
   height: 50%;
   background-color: #3f4;
-}
+} */
 .bodypicinfo {
   margin-top: 3%;
   position: absolute;
