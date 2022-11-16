@@ -119,7 +119,6 @@ function Hotelsinfo() {
         </Link>
       </div>
       <div className="backgpicinfo">
-        hi
         <div className="bodypicinfo">
           <div className="bodyleftinfo">hi</div>
           <div className="bodyrightinfo">
@@ -130,7 +129,22 @@ function Hotelsinfo() {
           </div>
         </div>
       </div>
-      <div className="bodyinforoom">he</div>
+      <div className="bodyinforoom">
+        <h1>HRE</h1>
+      </div>
+      <div className="selectroominfo">
+        <h1>Select your room</h1>
+      </div>
+      <div className="anoterRoom">
+        <h1>Beds Japanese Style</h1>
+        <div className="bedinforoom">
+          <div className="firstbedinforoom">
+            <div className="picbedinforoom">hi</div>
+          </div>
+          <div className="secondbedinforoom">he</div>
+          <div className="threebedinforoom">hh</div>
+        </div>
+      </div>
     </div>
   );
 }
