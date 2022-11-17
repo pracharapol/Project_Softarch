@@ -256,15 +256,16 @@
 } */
 .bodyinforoom {
   position: absolute;
-  background-color: #3f4045;
+  /* background-color: #3f4045; */
   top: 80%;
   left: 13%;
   width: 76%;
   height: 15%;
+  border-style: ridge;
 }
 .selectroominfo {
   position: absolute;
-  background-color: #3f4045;
+  /* background-color: #3f4045; */
   top: 100%;
   left: 13%;
   width: 76%;
@@ -299,6 +300,7 @@
   background: rebeccapurple;
 }
 .secondbedinforoom {
+  padding: 5%;
   position: absolute;
   padding-top: 1%;
   /* position: relative; */
@@ -317,4 +319,43 @@
   height: 90%;
   background: sienna;
   float: right;
+}
+.widjedinfo {
+  margin-top: 5%;
+}
+.priceinfo {
+  margin-top: 5%;
+}
+
+.picbodyleftinfo {
+  /* border-radius: 50px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.picbodyrightinfoOne {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.picbodyrightinfoTwo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.picbodyrightinfoThree {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.picbodyrightinfoFour {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hotelnamebodyinforoom {
+  margin-left: 5%;
+}
+.infobodyinforoom {
+  margin-left: 5%;
 }
