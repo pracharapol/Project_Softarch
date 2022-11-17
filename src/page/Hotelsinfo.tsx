@@ -118,6 +118,90 @@ function Hotelsinfo() {
           </button>
         </Link>
       </div>
+      <div className="backgpicinfo">
+        <div className="bodypicinfo">
+          <div className="bodyleftinfo">
+            {" "}
+            <img className="picbodyleftinfo" style={{}} src={picim} alt="" />
+          </div>
+          <div className="bodyrightinfo">
+            <div className="bodyrightinfoOne">
+              <img
+                className="picbodyrightinfoOne"
+                style={{}}
+                src={picim}
+                alt=""
+              />
+            </div>
+            <div className="bodyrightinfoTwo">
+              <img
+                className="picbodyrightinfoTwo"
+                style={{}}
+                src={picim2}
+                alt=""
+              />
+            </div>
+            <div className="bodyrightinfoThree">
+              <img
+                className="picbodyrightinfoThree"
+                style={{}}
+                src={picim2}
+                alt=""
+              />
+            </div>
+            <div className="bodyrightinfoFour">
+              <img
+                className="picbodyrightinfoFour"
+                style={{}}
+                src={picmap}
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bodyinforoom">
+        <h1 className="hotelnamebodyinforoom">
+          Hotel Balian Resort Tomei Kawasaki L.C.{" "}
+        </h1>
+        <h3 className="infobodyinforoom">
+          Conveniently situated in the Kawasaki part of Yokohama, this property
+          puts you close to attractions and interesting dining options. This
+          3-star property is packed with in-house facilities to improve the
+          quality and joy of your stay.
+        </h3>
+      </div>
+      <div className="selectroominfo">
+        <h1>Select your room</h1>
+      </div>
+      <div className="anoterRoom">
+        <h1>Beds Japanese Style</h1>
+        <div className="bedinforoom">
+          <div className="firstbedinforoom">
+            {" "}
+            <img
+              className="picbodyrightinfoTwo"
+              style={{}}
+              src={picim2}
+              alt=""
+            />
+            <div className="picbedinforoom"></div>
+          </div>
+          <div className="secondbedinforoom">
+            <div className="widjedinfo">
+              Free Breakfast <br /> Free WiFi
+            </div>
+          </div>
+          <div className="threebedinforoom">
+            <div className="priceinfo">880 Bath</div>
+            <div className="btnbooking">
+              <button>Book now</button>
+            </div>
+          </div>
+          {/* <div className="space">hhee</div> */}
+        </div>
+      </div>
+      {/* <div className="space">hhee</div> */}
     </div>
   );
 }

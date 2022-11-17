@@ -32,7 +32,7 @@ function Regispage() {
             <label className="emailposi" htmlFor="email">
               Email
             </label>
-            <br />0
+            <br />
             <input type="text" id="email" />
             <br />
             <label className="passposi" htmlFor="pass">
