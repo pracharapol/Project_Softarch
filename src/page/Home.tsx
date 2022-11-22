@@ -111,8 +111,8 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
         <div className='bg3'>
           <div className='search' style={{ marginBottom: '2%' }}>
             <h1 style={{ marginBottom: '0', fontSize: isIpad ? '24px' : isLargeDesktop ? '40px' : '32px' }}>Hotels, Resorts, Rooms & more</h1>
-            <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '14px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search for anything" title="Type in a category"></input>
-            <Link to="/Map"><ul className='M' style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '20px' : '16px' }}>🗺️</ul></Link>
+            
+
           </div>
 
           <div className='body20' >
@@ -125,9 +125,12 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
             </ul>
 
           </div>
-          <div className='body30' >
 
+          <div className='body30' >
+          <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '20px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search for anything" title="Type in a category"></input>
           </div>
+
+
           <Link to="/Checkin">
             <button className='body4' >
               <div className='checkin'></div>
