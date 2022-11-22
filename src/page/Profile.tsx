@@ -1,103 +1,241 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from 'antd';
 import '../Css/Profile.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Col, Container, Row } from '../Component/StyledGrid';
-
 import picmap from "../Css/Picture/avatar.png";
+
+
 
 function Profile() {
 
-  // function checkNewpass(newPassword, password2) {
-  //   if (newPassword == password2) {
-  //     return true;
-  //   }
-  //   else {
-  //     alert('Your passwords do not match.')
-  //   }
+  const [Fullname, setFullname] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
 
-  // }
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    fetch('http://localhost:3001/users/profile/' + token, {
+        method: 'GET', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
 
-  // function checkPassword1(newPassword) {
-  //   var strength = 0;
-  //   if (newPassword.match(/[a-z]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (newPassword.match(/[A-Z]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (newPassword.match(/[0-9]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (newPassword.match(/[$@#&!]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (newPassword.length < 8) {
+    })
+        .then(response => response.json())
+        .then(data => {
+            setFullname(data.name)
+            setEmail(data.username)
+            setPhone(data.phone)
+        })
 
-  //     strength -= 4;
-  //   }
-  //   if (strength < 3) {
-  //     alert('Use 8 more characters with a mix of letters, capital letters, numbers & symbols')
-  //     return false;
-  //   }
-
-  //   switch (strength) {
-  //     case 0:
-  //       return false;
-  //     case 1:
-  //       return false;
-  //     case 2:
-  //       return false;
-  //     case 3:
-  //       return true;
-  //     case 4:
-  //       return true;
-  //     case 5:
-  //       return true;
-  //     default: return true
-  //   }
-  // }
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}, [])
 
 
-  // function checkPassword(password) {
-  //   var strength = 0;
-  //   if (password.match(/[a-z]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (password.match(/[A-Z]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (password.match(/[0-9]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (password.match(/[$@#&!]+/)) {
-  //     strength += 1;
-  //   }
-  //   if (password.length < 8) {
+  let navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    fetch('http://localhost:3001/api/auth/testDecodeHeaderToken', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(token),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (token === null) {
+                localStorage.removeItem('token')
+                navigate('/Login')
+            }else{
+                console.log(token)
+            }
+            console.log(data)
+        })
 
-  //     strength -= 4;
-  //   }
-  //   if (strength < 3) {
-  //     alert('Use 8 more characters with a mix of letters, capital letters, numbers & symbols')
-  //     return false;
-  //   }
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}, [])
 
-  //   switch (strength) {
-  //     case 0:
-  //       return false;
-  //     case 1:
-  //       return false;
-  //     case 2:
-  //       return false;
-  //     case 3:
-  //       return true;
-  //     case 4:
-  //       return true;
-  //     case 5:
-  //       return true;
-  //     default: return true
-  //   }
-  // }
+
+function checkNewpass(newPassword: any, newPassword1: any) {
+  if (newPassword == newPassword1) {
+      return true;
+  }
+  else {
+      alert('Your passwords do not match.')
+  }
+
+}
+
+function checkPassword1(newPassword: any) {
+  var strength = 0;
+  if (newPassword.match(/[a-z]+/)) {
+      strength += 1;
+  }
+  if (newPassword.match(/[A-Z]+/)) {
+      strength += 1;
+  }
+  if (newPassword.match(/[0-9]+/)) {
+      strength += 1;
+  }
+  if (newPassword.match(/[$@#&!]+/)) {
+      strength += 1;
+  }
+  if (newPassword.length < 8) {
+
+      strength -= 4;
+  }
+  if (strength < 3) {
+      alert('Use 8 more characters with a mix of letters, capital letters, numbers & symbols')
+      return false;
+  }
+
+  switch (strength) {
+      case 0:
+          return false;
+      case 1:
+          return false;
+      case 2:
+          return false;
+      case 3:
+          return true;
+      case 4:
+          return true;
+      case 5:
+          return true;
+      default: return true
+  }
+}
+
+
+function checkPassword(password: any) {
+  var strength = 0;
+  if (password.match(/[a-z]+/)) {
+      strength += 1;
+  }
+  if (password.match(/[A-Z]+/)) {
+      strength += 1;
+  }
+  if (password.match(/[0-9]+/)) {
+      strength += 1;
+  }
+  if (password.match(/[$@#&!]+/)) {
+      strength += 1;
+  }
+  if (password.length < 8) {
+
+      strength -= 4;
+  }
+  if (strength < 3) {
+      alert('Use 8 more characters with a mix of letters, capital letters, numbers & symbols')
+      return false;
+  }
+
+  switch (strength) {
+      case 0:
+          return false;
+      case 1:
+          return false;
+      case 2:
+          return false;
+      case 3:
+          return true;
+      case 4:
+          return true;
+      case 5:
+          return true;
+      default: return true
+  }
+}
+
+
+
+const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+
+  const jsonData = {
+
+      oldPassword: data.get('oldPassword'),
+      newPassword: data.get('newPassword'),
+      newPassword1: data.get('newPassword1'),
+  }
+  if (checkPassword1(jsonData.newPassword) && checkNewpass(jsonData.newPassword, jsonData.newPassword1)) {
+      const token = localStorage.getItem('token')
+      fetch('http://localhost:3001/users/reset', {
+          method: 'PUT', // or 'PUT'
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token
+          },
+          body:JSON.stringify({token, newPassword: jsonData.newPassword, oldPassword: jsonData.oldPassword})
+      })
+          .then(response => response.json())
+          .then(data => {
+              if(data.success == false){
+                  alert('Your password is Incorrect')
+              }else{
+              alert('Change password success')
+              localStorage.removeItem('token')
+              navigate('/Login')
+          }
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+  }
+
+};
+
+
+const handleSubmitname = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+  event.preventDefault();
+  const data1 = new FormData(event.currentTarget);
+
+  const jsonData1 = {
+
+      name: data1.get('name'),
+      phone: data1.get('phone'),
+  }
+      const token = localStorage.getItem('token')
+      fetch('http://localhost:3001/users/resetname', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body:JSON.stringify({name: jsonData1.name, phone: jsonData1.phone})
+      })
+      
+          .then(response => response.json())
+          .then(data => {
+            if(data.success == true){
+                alert('correct')
+                window.location.reload();
+            }else{
+              alert('incorrect')
+              
+            }
+        })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+  
+
+};
+
+
+
+
+
+
 
 
   return (
@@ -120,9 +258,9 @@ function Profile() {
 
         </div>
         <div className='TextProfile'>
-          <h2>Name : Pracharapol Jaruvanawat</h2>
-          <h2>E-mail : 63010630@kmitl.ac.th</h2>
-          <h2>Phone : 0623865222</h2>
+          <h2>Name : {Fullname}</h2>
+          <h2>E-mail : {Email}</h2>
+          <h2>Phone : {Phone}</h2>
           <Link to="/"><button className='BH'>Back</button></Link>
         </div>
       </div>
@@ -131,19 +269,16 @@ function Profile() {
 
           <h2 className="SC">Profile Setting</h2>
 
-          <form noValidate name="inf">
+          <form noValidate name="inf" onSubmit={handleSubmitname}>
             <div className="profileS">
-              <label >Firstname</label>
+              <label >Name</label>
             </div>
-            <input className="tp" type="text" id="Fname" name="Fname" required />
-            <div className="profileS">
-              <label >Lastname</label>
-            </div>
-            <input className="tp" type="text" id="Lname" name="Lname" required />
+            <input className="tp" type="text" id="name" name="name" required />
+  
             <div className="profileS">
               <label >Phone</label>
             </div>
-            <input className="tp" type="text" id="Phone" name="Phone" required />
+            <input className="tp" type="text" id="phone" name="phone" required />
             <br />
 
 
@@ -152,19 +287,18 @@ function Profile() {
               Submit
 
             </button>
-
-
-
-
           </form>
+
+
           <h2 className="SC">Password Setting</h2>
         <div className="SCT">
 
-          <form noValidate name="inp">
+          <form noValidate name="inp" onSubmit={handleSubmit}>
+            
             <div className="passwordS">
-              <label >Password</label>
+              <label >Your Password</label>
             </div>
-            <input className="ts" type="password" id="password" name="password" required />
+            <input className="ts" type="password" id="oldPassword" name="oldPassword" required />
             <div className="passwordS">
               <label >New Password</label>
             </div>
@@ -172,7 +306,7 @@ function Profile() {
             <div className="passwordS">
               <label >New Password again</label>
             </div>
-            <input className="ts" type="password" id="password2" name="password2" required />
+            <input className="ts" type="password" id="newPassword1" name="newPassword1" required />
             <br />
 
 

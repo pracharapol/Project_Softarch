@@ -1,73 +1,115 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import picim from "../Css/Picture/Imagebglog.svg";
 import "../Css/Login.css";
 function Login() {
-  return (
-    <div className="Create">
-      <div className="navbar">
-        <h1 className="clh">.</h1>
-      </div>
-      <div className="bodyoflogin">
-        <div className="loginbody">
-          <h1 className="logh">LOGIN</h1>
-          <form action="" className="fo">
-            {/* <br /> */}
-            <h3 className="forse">
-              For security, please sign in to access your information
-            </h3>
-            <label className="emailposi" htmlFor="email">
-              Email
-            </label>
-            <br />
-            <input type="text" id="email" />
-            <br />
-            <label className="passposi" htmlFor="pass">
-              Password
-            </label>
-            <br />
-            <input type="text" id="pass" />
-            <br />
-            <br />
-            <input
-              type="checkbox"
-              id="staylog"
-              name="staylog"
-              // value="Stay Login"
-            ></input>
-            <label id="staylogin" htmlFor="staylog">
-              {" "}
-              Stay Login
-            </label>
-            <br></br>
-            <br />
-            {/* <input className="summitbut" type="Submit" value="Submit"></input> */}
-            <button className="summitbut">LOGIN</button>
-            <div className="">
-              <Link to="/Regis" className="crAcc">
-                Create Account
-              </Link>
-            </div>
-          </form>
-        </div>
-        <div className="picbody">
-          <img
-            className="pic"
-            style={
-              {
-                // width: "100%",
-                // height: "100%",
-                // position: "relative",
-                // backgroundSize: "cover",
-              }
+
+  let navigate = useNavigate();
+  const handleSubmit = async (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+
+    const jsonData ={
+        username: data.get('username'),
+        password: data.get('password'),
+    }
+    await fetch('http://localhost:3001/auth/login', {
+        method: 'POST', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+        
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        if(data.message == "Unauthorized"){
+          alert('invalid email or password')
+        }else{
+          alert('Login success')
+          localStorage.setItem('token', data.jwtToken)
+          navigate('/')
+        }
+      })
+
+
+      .catch((err) => {
+        console.log(err);
+       });
+           
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    fetch('http://localhost:3001/api/auth/testDecodeHeaderToken', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(token),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (token != null) {
+                navigate('/')
+            }else{
+
             }
-            src={picim}
-            alt=""
-          />
+            console.log(data)
+        })
+
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}, [])
+
+
+
+
+
+
+
+  return (
+    <div className="bgr">
+      <h2 className="cr">Login</h2>
+
+
+      <div className="bodyAccount">
+
+        <div className="login">
+
+          <form noValidate onSubmit={handleSubmit} name="inp">
+            <div className="email1">
+              <label >Email Adress</label>
+            </div>
+            <input className="tx1" type="email" id="username" name="username" />
+
+            <div className="email1">
+              <label >Password</label>
+            </div>
+            <input className="tx1" type="password" id="password" name="password" />
+
+        
+            <br />
+            <br />
+            <br />
+
+            <button className="button-save1" type="submit">
+
+              Sign in
+
+
+            </button>
+
+          </form>
+          <br />
+          <div className="txs1"><a  href="/Regis">Don't have an account? Sign up</a></div>
         </div>
       </div>
+
     </div>
+
   );
 }
 

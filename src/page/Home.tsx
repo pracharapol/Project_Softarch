@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "antd";
 import '../Css/Home.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from "react";
 import { getByTestId, render } from '@testing-library/react';
@@ -25,9 +25,57 @@ function Home() {
   // useEffect will Render manage for function การเรียกทำงานฟังก์ชันนั้นๆ
   // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
-  function ButtonLoggin() {
+  function ButtonLoggin(x: number | undefined) {
+    if(x === 1){
     return false
+    }
+    else{
+      return true
+    }
   }
+
+
+  
+  let navigate = useNavigate();
+  
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    fetch('http://localhost:3001/auth/testDecodeHeaderToken', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(token),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (token === null) {
+                localStorage.removeItem('token')
+                navigate('/Login')
+            }else{
+              ButtonLoggin(3)
+              console.log(token)
+
+            }
+            console.log(data)
+        })
+
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}, [])
+
+
+const handleLogout = (event: { preventDefault: () => void; }) => {
+  event.preventDefault();
+  localStorage.removeItem('token')
+  navigate('/Login')
+
+}
+
+
+
 
   return (
 
@@ -45,7 +93,9 @@ function Home() {
               <li><a href="/Hotels" >Hotels</a></li>
               <li><a href="/Coupons">Coupons</a></li>
               <li><a href="/PaymentInformation">Activity</a></li>
-              <Greeting isLoggedIn={ButtonLoggin()} />
+              <li className='Logout' id='C' style={{ float: 'right' }} onClick ={handleLogout}><a className="active3">Logout</a></li>;
+              <Greeting isLoggedIn={ButtonLoggin(3)} />
+              
               
             </ul>
             

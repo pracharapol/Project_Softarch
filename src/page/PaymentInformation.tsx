@@ -1,10 +1,87 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'antd';
 import '../Css/PaymentInformation.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 function PaymentInformation() {
+
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+      const token = localStorage.getItem('token')
+      fetch('http://localhost:3001/auth/testDecodeHeaderToken', {
+          method: 'POST', // or 'PUT'
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify(token),
+      })
+          .then(response => response.json())
+          .then(data => {
+              if (token === null) {
+                  localStorage.removeItem('token')
+                  navigate('/Login')
+              }else{
+  
+              }
+          })
+  
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+  }, [])
+
+
+
+
+  const handleSubmit = (event: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+  
+    const jsonData = {
+  
+        firstname: data.get('Fname'),
+        lastname: data.get('Lname'),
+        phone: data.get('Phone'),
+        email: data.get('Email'),
+    }
+    if (Checksmoke() && Checkbed()) {
+        const token = localStorage.getItem('token')
+        fetch('http://localhost:3001/users/booking', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+            body:JSON.stringify({ firstName: jsonData.firstname, lastName: jsonData.lastname, email: jsonData.email, phone: jsonData.phone})
+        })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success == false){
+                    alert('Your password is Incorrect')
+                }else{
+                alert('Bill success')
+                navigate('/Bill')
+            }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+  
+  };
+
+
+
+
+
+
+
+
+
+
     const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
     const isIpad = useMediaQuery({ query: '(min-width: 760px) and (max-width: 1248px)' });
     const isLargeDesktop = useMediaQuery({ query: '(min-width: 1920px)' });
@@ -13,7 +90,7 @@ function PaymentInformation() {
         const checkBox = document.getElementById("myCheck") as HTMLInputElement;
         const checkBox2 = document.getElementById("myCheck2") as HTMLInputElement;
         var count = 1;
-
+        const notfound = 'notfound' ;
         if (checkBox2.checked === true) {
             count += 1;
         }
@@ -25,14 +102,22 @@ function PaymentInformation() {
         if (count == 2) {
             checkBox.checked = false
             checkBox2.checked = true
+            console.log(checkBox2.value)
+            localStorage.setItem('smoke', checkBox2.value)
+            return true
         }
         if (count == 0) {
             checkBox2.checked = false
             checkBox.checked = true
+            localStorage.setItem('smoke', checkBox.value)
+            console.log(checkBox.value)
+            return true
         }
         if (count == 1) {
             checkBox2.checked = false
             checkBox.checked = false
+            localStorage.setItem('smoke', notfound)
+            return false
         }
     }
 
@@ -40,7 +125,7 @@ function PaymentInformation() {
         const checkBox = document.getElementById("bedCheck") as HTMLInputElement;
         const checkBox2 = document.getElementById("bedCheck2") as HTMLInputElement;
         var count = 1;
-
+        const notfound = 'notfound' ;
         if (checkBox2.checked === true) {
             count += 1;
         }
@@ -52,14 +137,20 @@ function PaymentInformation() {
         if (count == 2) {
             checkBox.checked = false
             checkBox2.checked = true
+            localStorage.setItem('bed', checkBox2.value)
+            return true
         }
         if (count == 0) {
             checkBox2.checked = false
             checkBox.checked = true
+            localStorage.setItem('bed', checkBox.value)
+            return true
         }
         if (count == 1) {
             checkBox2.checked = false
             checkBox.checked = false
+            localStorage.setItem('bed', notfound)
+            return false
         }
     }
 
@@ -93,7 +184,7 @@ function PaymentInformation() {
                 </div>
                 <div className='inpaa'>
 
-                    <form noValidate name="inpa">
+                    <form noValidate name="inpa" onSubmit={handleSubmit}>
                         <div className='F1'>
                             <h2>ข้อมูลผู้จอง</h2>
                             <div className="profilepa">
@@ -119,16 +210,16 @@ function PaymentInformation() {
 
                             <h3>เลือกรูปเเบบห้องที่ต้องการ</h3>
 
-                            <input className='smokecheck' type="checkbox" id="myCheck" onClick={Checksmoke} required />
+                            <input className='smokecheck' type="checkbox" id="myCheck" name="cansmoke" value= "Can smoke" onClick={Checksmoke} required />
                             <label className='smoke' htmlFor="myCheck">สูบบุหรี่ได้</label>
-                            <input className='notsmokecheck' type="checkbox" id="myCheck2" onClick={Checksmoke} required />
+                            <input className='notsmokecheck' type="checkbox" id="myCheck2" name="cannotsmoke" value= "Can't smoke" onClick={Checksmoke} required />
                             <label className='notsmoke' htmlFor="myCheck2">สูบบุหรี่ไม่ได้</label>
 
                             <h3 style={{ marginTop: '10%' }}>เลือกรูปเเบบเตียง</h3>
 
-                            <input className='bedcheck' type="checkbox" id="bedCheck" onClick={Checkbed} required />
+                            <input className='bedcheck' type="checkbox" id="bedCheck" name="bed" value= "Single bed" onClick={Checkbed} required />
                             <label className='bed' htmlFor="bedCheck">เตียงเดี่ยว</label>
-                            <input className='notbedcheck' type="checkbox" id="bedCheck2" onClick={Checkbed} required />
+                            <input className='notbedcheck' type="checkbox" id="bedCheck2" name="beds"  value= "Twin beds" onClick={Checkbed} required />
                             <label className='notbed' htmlFor="bedCheck2">เตียงคู่</label>
                         </div>
                         <button className="button-pa">
