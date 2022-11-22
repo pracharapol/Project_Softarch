@@ -224,11 +224,11 @@
     
   .body20 ul  li {
       float: left;
-      margin-left:1% ;
+      margin-left:10% ;
       padding: auto;
       border-radius: 0px;
       position: relative;
-      width:19%;
+      width:20%;
       background-position: center;
     }
   .body20 ul li a {

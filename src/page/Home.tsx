@@ -91,8 +91,7 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
             </Link>
             <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px'}}>
               <li><a href="/Hotels" >Hotels</a></li>
-              <li><a href="/Coupons">Coupons</a></li>
-              <li><a href="/PaymentInformation">Activity</a></li>
+              <li><a href="/Bill">Bill</a></li>
               <li className='Logout' id='C' style={{ float: 'right' }} onClick ={handleLogout}><a className="active3">Logout</a></li>;
               <Greeting isLoggedIn={ButtonLoggin(3)} />
               
@@ -122,8 +121,7 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
               <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="/Hotels">Hotels</a></li>
               <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="Cheap">Cheap Hotel</a></li>
               <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="/Near">Hotel near me</a></li>
-              <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="/Long">Long trip</a></li>
-              <li style={{ float: 'left', textAlign: 'center', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}><a href="/Activity">Activities</a></li>
+
             </ul>
 
           </div>

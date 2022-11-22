@@ -169,9 +169,9 @@ function PaymentInformation() {
                         </div>
                     </Link>
                     <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}>
-                        <li><a href="/Hotels" >Hotels</a></li>
-                        <li><a href="/Coupons">Coupons</a></li>
+                        <li><a href="/" >Home</a></li>
                         <li><a href="/Bill">Bill</a></li>
+                        <li><a href="/Hotels">Hotels</a></li>
 
                     </ul>
 
