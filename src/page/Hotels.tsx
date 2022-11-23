@@ -21,6 +21,34 @@ function Hotels() {
 
 
   let navigate = useNavigate();
+  
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    fetch('http://localhost:3001/auth/testDecodeHeaderToken', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(token),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (token === null) {
+                localStorage.removeItem('token')
+                navigate('/Login')
+            }else{
+              ButtonLoggin(3)
+              console.log(token)
+
+            }
+            console.log(data)
+        })
+
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}, [])
 
   const [Hotelname, setHotelname] = useState([]);
   const [hinfo, hotelInfo] = useState([]);
@@ -186,7 +214,7 @@ function ButtonLoggin(x: number | undefined) {
 
       <div className="bodyhotel4">
         <div className="sorthotel">
-          <button className="sort" disabled>
+          {/* <button className="sort" disabled>
             <p
               style={{
                 marginBottom: "0px",
@@ -195,8 +223,10 @@ function ButtonLoggin(x: number | undefined) {
             >
               SORT
             </p>
-          </button>
+          </button> */}
+          
           <button className="bestmatch">
+          <Link to="/Hotels" >
             <p
               style={{
                 marginBottom: "0px",
@@ -205,8 +235,12 @@ function ButtonLoggin(x: number | undefined) {
             >
               BEST MATCH
             </p>
+            </Link>
           </button>
+          
+          
           <button className="cheap">
+          <Link to="/cheap" >
             <p
               style={{
                 marginBottom: "0px",
@@ -215,8 +249,10 @@ function ButtonLoggin(x: number | undefined) {
             >
               CHEAP HOTEL
             </p>
+            </Link>
           </button>
           <button className="near">
+          <Link to="/Near" >
             <p
               style={{
                 marginBottom: "0px",
@@ -225,9 +261,14 @@ function ButtonLoggin(x: number | undefined) {
             >
               NEAR ME
             </p>
+            </Link>
           </button>
           
         </div>
+
+        
+
+        
 
         <div className="info">
           <Link to="/Hotelsinfo">
@@ -273,6 +314,38 @@ function ButtonLoggin(x: number | undefined) {
                   backgroundSize: "cover",
                   borderRadius: "10px",
                 }}
+                src={picim3}
+                alt=""
+              />
+            </button>
+          </Link>
+          <div className="infoleft">
+            <div className="nameinfo">{Hotelname2}</div>
+            <div className="namelocation">
+            {hinfo2}
+            </div>
+            <div className="Linebody3"></div>
+          </div>
+          <div className="inforight">
+            <div className="review">Excellent</div>
+            <div className="userReview">322 review</div>
+            <div className="reviewStar">9.6</div>
+            <div className="price">{hprice2} Bath</div>
+            <div className="extra">+FREE CANCELLATION</div>
+            <button className="selectR" id='two' onClick={CheckHotel2}>SELECT ROOM</button>
+          </div>
+        </div> 
+        <div className="info">
+          <Link to="/Hotelsinfo">
+            <button className="hotelImage">
+              <img
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  position: "relative",
+                  backgroundSize: "cover",
+                  borderRadius: "10px",
+                }}
                 src={picim2}
                 alt=""
               />
@@ -297,41 +370,7 @@ function ButtonLoggin(x: number | undefined) {
 
 
 
-        <div className="info">
-          <Link to="/Hotelsinfo">
-            <button className="hotelImage">
-              <img
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  position: "relative",
-                  backgroundSize: "cover",
-                  borderRadius: "10px",
-                }}
-                src={picim3}
-                alt=""
-              />
-            </button>
-          </Link>
-          <div className="infoleft">
-            <div className="nameinfo">{Hotelname2}</div>
-            <div className="namelocation">
-            {hinfo2}
-            </div>
-            <div className="Linebody3"></div>
-          </div>
-          <div className="inforight">
-            <div className="review">Excellent</div>
-            <div className="userReview">322 review</div>
-            <div className="reviewStar">9.6</div>
-            <div className="price">{hprice2} Bath</div>
-            <div className="extra">+FREE CANCELLATION</div>
-            <button className="selectR" id='two' onClick={CheckHotel2}>SELECT ROOM</button>
-          </div>
-        </div> 
-
-
-
+        
       </div>
 
 

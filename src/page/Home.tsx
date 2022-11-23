@@ -26,53 +26,53 @@ function Home() {
   // รอ token เพื่อปรับฟังก์ชัน Visibl component.
 
   function ButtonLoggin(x: number | undefined) {
-    if(x === 1){
-    return false
+    if (x === 1) {
+      return false
     }
-    else{
+    else {
       return true
     }
   }
 
 
-  
+
   let navigate = useNavigate();
-  
+
   useEffect(() => {
     const token = localStorage.getItem('token')
     fetch('http://localhost:3001/auth/testDecodeHeaderToken', {
-        method: 'POST', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + token
-        },
-        body: JSON.stringify(token),
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      },
+      body: JSON.stringify(token),
     })
-        .then(response => response.json())
-        .then(data => {
-            if (token === null) {
-                localStorage.removeItem('token')
-                navigate('/Login')
-            }else{
-              ButtonLoggin(3)
-              console.log(token)
+      .then(response => response.json())
+      .then(data => {
+        if (token === null) {
+          localStorage.removeItem('token')
+          navigate('/Login')
+        } else {
+          ButtonLoggin(3)
+          console.log(token)
 
-            }
-            console.log(data)
-        })
+        }
+        console.log(data)
+      })
 
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-}, [])
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, [])
 
 
-const handleLogout = (event: { preventDefault: () => void; }) => {
-  event.preventDefault();
-  localStorage.removeItem('token')
-  navigate('/Login')
+  const handleLogout = (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    localStorage.removeItem('token')
+    navigate('/Login')
 
-}
+  }
 
 
 
@@ -89,17 +89,17 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
               <div className="logoh">
               </div>
             </Link>
-            <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px'}}>
+            <ul style={{ marginBottom: '0', fontSize: isIpad ? '10px' : isLargeDesktop ? '18px' : '14px' }}>
               <li><a href="/Hotels" >Hotels</a></li>
               <li><a href="/Bill">Bill</a></li>
-              <li className='Logout' id='C' style={{ float: 'right' }} onClick ={handleLogout}><a className="active3">Logout</a></li>;
+              <li className='Logout' id='C' style={{ float: 'right' }} onClick={handleLogout}><a className="active3">Logout</a></li>;
               <Greeting isLoggedIn={ButtonLoggin(3)} />
-              
-              
+
+
             </ul>
-            
+
           </div>
-          
+
         </div>
         <div className='bg2'>
           <div className='HEAD'>
@@ -111,7 +111,7 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
         <div className='bg3'>
           <div className='search' style={{ marginBottom: '2%' }}>
             <h1 style={{ marginBottom: '0', fontSize: isIpad ? '24px' : isLargeDesktop ? '40px' : '32px' }}>Hotels, Resorts, Rooms & more</h1>
-            
+
 
           </div>
 
@@ -127,7 +127,11 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
           </div>
 
           <div className='body30' >
-          <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '20px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search Hotels" title="Type in a category"></input>
+
+
+            <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '20px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search Hotels" title="Type in a category"></input>
+
+
           </div>
 
 
@@ -151,8 +155,10 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
         </div>
 
         <div >
-
+          <Link to="/hotels">
           <button className='Bsearch'>Search</button>
+          </Link>
+          
         </div>
 
 

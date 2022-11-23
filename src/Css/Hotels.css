@@ -211,8 +211,8 @@
 .bodyhotel4 .sorthotel {
   
   margin-top: 2%;
-  margin-left: 2%;
-  color: black;
+  margin-left: 25%;
+  
   position: relative;
   top: 0;
 
@@ -227,16 +227,22 @@
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .bestmatch {
+  background-color: #4285f4;
+  color: white;
   width: 17%;
   cursor: pointer;
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .cheap {
+  background-color: #4285f4;
+  color: white;
   width: 17%;
   cursor: pointer;
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .near {
+  background-color: #4285f4;
+  color: white;
   width: 17%;
   cursor: pointer;
 }
@@ -246,16 +252,30 @@
 }
 
 .bodyhotel4 .sorthotel .bestmatch:hover {
-  color: #4285f4;
+  /* color: #4285f4; */
+  color: white;
 }
 .bodyhotel4 .sorthotel .cheap:hover {
-  color: #4285f4;
+  /* color: #4285f4; */
+  color: white;
 }
 .bodyhotel4 .sorthotel .near:hover {
-  color: #4285f4;
+  /* color: #4285f4; */
+  color: white;
 }
 .bodyhotel4 .sorthotel .top:hover {
-  color: #4285f4;
+  color: white;
+  /* color: #4285f4; */
+}
+
+.bestmatch p{
+  color: #f5f5f5;
+}
+.cheap p{
+  color: #f5f5f5;
+}
+.near p{
+  color: #f5f5f5;
 }
 .bodyhotel4 .info {
   margin-top: 2%;
