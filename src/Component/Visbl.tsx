@@ -15,7 +15,7 @@ function UserGreeting2(props: any) {
 
 function GuestGreeting(props: any) {
   
-  return <li className='profile' id='C' style={{ float: 'right' }}><a className="active3" href="/Profile">Profile</a></li>;
+  return <li className='profile' id='C' style={{ float: 'right'}}><a className="active3" href="/Profile">Profile</a></li>;
 }
 
 

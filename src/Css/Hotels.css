@@ -84,7 +84,7 @@
   /* margin-top: 50px; */
   background-color: #3f4045;
   width: 100%;
-  height: 80px;
+  height: 68px;
   position: relative;
   z-index: 3;
   /* left: calc(10%); */
@@ -192,23 +192,12 @@
   margin-left: 9%;
 }
 
-.bodyhotel3 {
-  /* background-color: aliceblue; */
-  width: 41%;
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  /* left: calc(10%); */
-  /* top: 21%; */
-  border-radius: 10px;
-  /* border: 0.1em solid bisque; */
-  /* float: left; */
-}
+
 .bodyhotel4 {
   /* background-color: aliceblue; */
 
-  left: 41%;
-  width: 59%;
+  left: 13%;
+  width: 90%;
   height: 100%;
   position: absolute;
   z-index: 3;
@@ -220,10 +209,11 @@
 }
 
 .bodyhotel4 .sorthotel {
+  
   margin-top: 2%;
   margin-left: 2%;
   color: black;
-  position: sticky;
+  position: relative;
   top: 0;
 
   /* position: fixed; */
@@ -233,22 +223,26 @@
 
 .bodyhotel4 .sorthotel .sort {
   width: 12%;
-
+  cursor: pointer;
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .bestmatch {
   width: 17%;
+  cursor: pointer;
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .cheap {
   width: 17%;
+  cursor: pointer;
   /* background-color: #f5f5f5; */
 }
 .bodyhotel4 .sorthotel .near {
   width: 17%;
+  cursor: pointer;
 }
 .bodyhotel4 .sorthotel .top {
   width: 17%;
+  cursor: pointer;
 }
 
 .bodyhotel4 .sorthotel .bestmatch:hover {
@@ -272,9 +266,9 @@
   height: 30%;
   /* left: 50%; */
   border-radius: 10px;
-  border-color: #4285f4;
+  border-color: #000000;
   border-bottom: #4285f4;
-  border: 1px solid#4285f4;
+  border: 2px solid#000000;
   position: relative;
 }
 
@@ -286,8 +280,9 @@
   position: relative;
   border-color: #4285f4;
   border-bottom: #4285f4;
-  border: 1px solid#4285f4;
+  border: 1px solid#000000;
   float: left;
+  border-radius: 10px;
 }
 .infoleft {
   margin-top: 1%;
@@ -313,10 +308,12 @@
   /* background-color: #4285f4; */
   /* position: sticky; */
   left: 50px;
+  font-weight: bold;
+  font-size: 20px;
   /* margin-top: 5px; */
 }
 .namelocation {
-  color: #4285f4;
+  color: #243a5b;
   background-color: #fff;
   /* position: relative; */
   left: 50px;
@@ -345,7 +342,7 @@
 }
 .price {
   position: absolute;
-  margin-top: 50%;
+  margin-top: 35%;
   left: 80%;
   text-align: right;
 }
@@ -353,21 +350,29 @@
   color: #34a853;
   position: absolute;
   font-size: 8px;
-  margin-top: 60%;
-  left: 50%;
+  margin-top: 45%;
+  left: 65%;
   text-align: right;
 }
 .selectR {
-  background-color: #4285f4;
+  background-color: #253e68;
   /* position: absolute; */
   color: white;
   left: 15%;
   font-size: 16px;
   width: 98%;
-  margin-top: 90%;
-  border: none;
+  margin-top: 55%;
+  border: 1px solid #000000;
+  border-radius: 5px;
   height: auto;
+  cursor: pointer;
 }
+
+.selectR:hover{
+ scale: 1.1;
+ transition: 0.5s;
+}
+
 .mapImage {
   /* position: sticky; */
   top: 2%;
@@ -389,4 +394,10 @@
   border-bottom: #4285f4;
   border: 1px solid #000000;
   width: 66%;
+}
+
+.bodyhotel1 ul li .active3 {
+  border: 0.001em solid rgb(225, 250, 1);
+  border-radius: 0px;
+  position: relative;
 }

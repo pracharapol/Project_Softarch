@@ -127,7 +127,7 @@ const handleLogout = (event: { preventDefault: () => void; }) => {
           </div>
 
           <div className='body30' >
-          <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '20px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search for anything" title="Type in a category"></input>
+          <input style={{ fontSize: isIpad ? '12px' : isLargeDesktop ? '16px' : '20px' }} type="text" className='myS' id="mySearch" placeholder="🔍 Search Hotels" title="Type in a category"></input>
           </div>
 
 
